@@ -1,11 +1,21 @@
 import "./MovieCard.css";
 
-function MovieCard({ title, year, genre, rating, poster, available }) {
+function MovieCard({ title, year, duration, genre, rating, poster, available }) {
+  let liked = false;
+
+  function handleLike() {
+    liked = !liked;
+    console.log("liked:", liked);
+  }
+
   return (
     <article className="movie-card">
       <div className="movie-card__poster">
         <img src={poster} alt={title} />
-        {available && <span className="movie-card__badge">זמין לצפייה</span>}
+        {available &&<span className="movie-card__badge">זמין לצפייה</span>}
+        <button className="movie-card__like" onClick={handleLike}>
+          {liked ? "♥" : "♡"}
+        </button>
       </div>
       <div className="movie-card__body">
         <h3 className="movie-card__title">{title}</h3>
