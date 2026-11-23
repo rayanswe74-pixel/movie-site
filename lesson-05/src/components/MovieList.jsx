@@ -7,7 +7,8 @@ function MovieList({ title, movies }) {
       <h2 className="movie-list__title">{title}</h2>
       <div className="movie-list__grid">
         {movies.map(movie => {
-          <MovieCard
+         return <MovieCard
+          key={movie.title}
             title={movie.title}
             year={movie.year}
             duration={movie.duration}
