@@ -1,12 +1,14 @@
+import { useState } from "react";
 import "./MovieCard.css";
 
 function MovieCard({ title, year, duration, genre, rating, poster, available }) {
-  let liked = false;
+  const [liked, setLiked] = useState(false);
 
   function handleLike() {
-    liked = !liked;
-    console.log("liked:", liked);
-  }
+function handleLike() {
+  setLiked(!liked);
+  console.log("liked:", liked);
+}  }
 
   return (
     <article className="movie-card">

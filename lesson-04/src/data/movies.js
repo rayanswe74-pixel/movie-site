@@ -70,6 +70,4 @@ export const movies = [
     available: true,
   },
 ];
-<ul>
-  {["React", "Vite", "JSX"].map(word => <li>{word}</li>)}
-</ul>
+  
